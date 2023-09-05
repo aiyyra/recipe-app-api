@@ -57,3 +57,45 @@ configuring github actions
 -create config file (.github/workflows/checks.yml) and set trigger
 -config dockerhub auth (including add secret (Docker auth) to github)
 -set .github n workflows folder for checks.yml file
+
+Django test framework
+-from unittest library
+-can make tests.py or tests directory to stored the test modules
+-Use TDD to create test file, simple example is on calc.py and test.py for calc module
+
+Mocking
+-override n change dependencies when testing
+-use unittest.mock library
+
+- testing the code functionality without it actually running it fully
+
+Config Database (PostGreSQL)
+
+> Add Database to docker-compose.yml
+> -config Django
+> -install database adaptor (psyopsg2)
+> -update environment to include adapter
+> add database and adapter to settings.py
+
+fixing database race condition(so the db and app can run together withour any problem)
+create the core folder and remove unnecessary files + add core to apps settings
+-add commands and test commands
+-create wait for db command to wait for database to be available to resolve the issue
+-create the test and finish the actual command
+
+Database migration (to use our database)
+-Django ORM (Object Relational Mapper) handles db syntax
+Start by defining models
+use django to generate migration files
+setup database
+store data with interaction with model
+a models contain name, fields, metadata, custom python login
+
+to create migration
+-define models
+-s=ensure app is enable in settings.py
+-create migration files, use django CLI: python manage.py makemigrations
+-apply migration to db, use django CLI: python manage.py migrate
+
+/update docker-compose.yml file so the commands wait for db b4 the sercer start
+/update ci/cd to do the same
