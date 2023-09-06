@@ -99,3 +99,55 @@ to create migration
 
 /update docker-compose.yml file so the commands wait for db b4 the sercer start
 /update ci/cd to do the same
+
+Django user model
+-django auth system
+
+1. create model
+2. create custom manager
+3. set AUTH_USER_MODEL insettings.py
+4. Create n run migrations
+
+design for our custom user model
+
+> email
+> name
+> is_active
+> is_staff
+> User model manager
+> hash password
+
+Add Test for our custom user model
+
+setup django admin
+-admin.py
+customising django admin
+-inherite modeladmin n useradmin class
+add/update page
+-fieldset: control page layout
+
+API documentation
+-endpoints (paths)
+-method (get,post,dll)
+-payloads (input, input structure)
+-responses (output)
+-authentication process
+
+auto api documentation
+-Docs in DRF, lib: drf-spectacular
+-generate schema/document
+-browsable web interface
+
+1)generate schema
+2)parse schema to gui
+
+User API
+handle
+
+- registration (post)
+- create auth token (post)
+- view, update profile (put, get)
+  endpoint:
+  user/create/
+  user/token/
+  user/me/
